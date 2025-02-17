@@ -1,11 +1,11 @@
-# Machine Learning Basics For All - WIP
+# Machine Learning Basics For All - W.I.P
 
 ## Using This Repository
 
-To use this repository, you can clone it using the following command:
+To use this repository, you can clone and run it using the following commands:
 
 ```bash\n
-git clone <link_to_repository>
+git clone https://github.com/engagepy/machine-learning-basics.git
 ```
 ```bash\n
 python3 -m venv env
@@ -24,6 +24,7 @@ python3 <filename>.py
 
 > Each file is a lesson covering a specific topic in machine learning.
 
+### Index :
 
 - binning.py - Binning in Machine Learning
 - min_max.py - Min-Max Normalization in Machine Learning
