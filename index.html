@@ -3,89 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Machine Learning Basics For All</title>
+    <title>Machine Learning Basics</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            background-color: #121212;
+            color: #e0e0e0;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f4f4f4;
         }
+
+        /* Containers & Sections */
+        .container {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
+        }
+
         h1, h2, h3 {
-            color: #2c3e50;
+            color: #03DAC6;
         }
+
         h1 {
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid #03DAC6;
             padding-bottom: 10px;
+            font-size: 28px;
         }
+
+        h2 {
+            font-size: 22px;
+            margin-top: 25px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        /* Code Block */
         code {
-            background-color: #e8e8e8;
-            padding: 2px 4px;
+            background-color: #333;
+            padding: 3px 6px;
             border-radius: 4px;
             font-family: 'Courier New', Courier, monospace;
         }
+
         pre {
-            background-color: #2c3e50;
-            color: #ecf0f1;
+            background-color: #252525;
+            color: #f0f0f0;
             padding: 15px;
-            border-radius: 5px;
+            border-radius: 8px;
             overflow-x: auto;
+            font-size: 14px;
         }
+
+        /* Highlighted Text */
         .highlight {
-            background-color: #3498db;
+            background-color: #6200ea;
             color: white;
             padding: 5px 10px;
-            border-radius: 3px;
+            border-radius: 4px;
             font-weight: bold;
         }
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+
+        /* Styled Button */
         .button {
             display: inline-block;
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
+            background-color: #03DAC6;
+            color: #121212;
+            padding: 12px 18px;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background 0.3s ease;
         }
+
         .button:hover {
-            background-color: #2980b9;
+            background-color: #018786;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>Machine Learning Basics For All - W.I.P</h1>
+        <h1>Machine Learning Basics - Work in Progress</h1>
 
         <h2>Using This Repository</h2>
-        <p>To use this repository, you can clone and run it using the following commands:</p>
+        <p>Clone and run the repository with:</p>
         <pre><code>git clone https://github.com/engagepy/machine-learning-basics.git
 python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt
 python3 &lt;filename&gt;.py</code></pre>
+    </div>
 
+    <div class="container">
         <h2>File Structure</h2>
-        <p>Each file is a lesson covering a specific topic in machine learning.</p>
-        <h3>Index:</h3>
+        <p>Each file is a lesson covering a specific ML topic:</p>
         <ul>
             <li><code>binning.py</code> - Binning in Machine Learning</li>
-            <li><code>min_max.py</code> - Min-Max Normalization in Machine Learning</li>
+            <li><code>min_max.py</code> - Min-Max Normalization</li>
         </ul>
+    </div>
 
+    <div class="container">
         <h2>Introduction To Machine Learning Basics</h2>
-        <p>Machine learning is a subset of artificial intelligence that focuses on the development of computer programs that can teach themselves to grow and change when exposed to new data. The process of machine learning is similar to that of data mining. Both systems search through data to look for patterns. However, instead of extracting data for human comprehension -- as is the case in data mining applications -- machine learning uses that data to detect patterns in data and adjust program actions accordingly.</p>
+        <p>Machine Learning (ML) is a subset of artificial intelligence focused on developing systems that learn and improve from experience without being explicitly programmed.</p>
+    </div>
 
+    <div class="container">
         <h2>Types of Machine Learning</h2>
-        <p>There are three types of machine learning:</p>
         <ol>
             <li><span class="highlight">Supervised Learning</span></li>
             <li><span class="highlight">Unsupervised Learning</span></li>
@@ -93,56 +140,54 @@ python3 &lt;filename&gt;.py</code></pre>
         </ol>
 
         <h3>Supervised Learning</h3>
-        <p>Supervised learning is the most common type of machine learning. It is the method of teaching the machine by example. The algorithm is trained on a labeled dataset, which means some input data is already tagged with the correct output. The algorithm learns to map the input to the output and makes predictions based on the input data. The goal of supervised learning is to approximate the mapping function so well that when you have new input data, you can predict the output variables for that data.</p>
+        <p>Trained using labeled datasets. The algorithm learns the relationship between input and output.</p>
 
         <h3>Unsupervised Learning</h3>
-        <p>Unsupervised learning is a type of machine learning that looks for previously undetected patterns in a data set with no pre-existing labels. The system is not told the "right answer." The algorithm must figure out what is being shown. The goal is to explore the data and find some structure within it. Unsupervised learning is used for clustering population in different groups.</p>
+        <p>Works with unlabeled data to find hidden patterns or intrinsic structures.</p>
 
         <h3>Reinforcement Learning</h3>
-        <p>Reinforcement learning is a type of machine learning that is about taking suitable action to maximize reward in a particular situation. It is employed by various software and machines to find the best possible behavior or path it should take in a specific situation. Reinforcement learning differs from the supervised learning in a way that in supervised learning the training data has the answer key with it so the model is trained with the correct answer itself whereas in reinforcement learning, there is no answer but the reinforcement agent decides what to do to perform the given task.</p>
+        <p>Agents learn by interacting with their environment and receiving rewards for positive outcomes.</p>
+    </div>
 
+    <div class="container">
         <h2>Machine Learning Algorithms</h2>
-        <p>There are several machine learning algorithms, and they can be broadly classified into three categories:</p>
-
-        <h3>1. Supervised Learning Algorithms</h3>
+        
+        <h3>Supervised Learning Algorithms</h3>
         <ul>
             <li>Linear Regression</li>
-            <li>Logistic Regression</li>
             <li>Decision Trees</li>
             <li>Random Forest</li>
-            <li>Gradient Boosting</li>
             <li>Support Vector Machines</li>
             <li>Neural Networks</li>
         </ul>
 
-        <h3>2. Unsupervised Learning Algorithms</h3>
+        <h3>Unsupervised Learning Algorithms</h3>
         <ul>
             <li>K-Means Clustering</li>
             <li>Hierarchical Clustering</li>
-            <li>Principal Component Analysis</li>
-            <li>Independent Component Analysis</li>
-            <li>Singular Value Decomposition</li>
-            <li>Apriori Algorithm</li>
-            <li>Expectation-Maximization Algorithm</li>
+            <li>Principal Component Analysis (PCA)</li>
         </ul>
 
-        <h3>3. Reinforcement Learning Algorithms</h3>
+        <h3>Reinforcement Learning Algorithms</h3>
         <ul>
             <li>Q-Learning</li>
-            <li>SARSA</li>
-            <li>Deep Adversarial Networks</li>
-            <li>Deep Deterministic Policy Gradient</li>
-            <li>Asynchronous Advantage Actor-Critic</li>
+            <li>Deep Q Networks (DQN)</li>
+            <li>Policy Gradient Methods</li>
         </ul>
+    </div>
 
+    <div class="container">
         <h2>Conclusion</h2>
-        <p>Machine learning is a powerful tool that can be used to make predictions based on data. It is a subset of artificial intelligence that focuses on the development of computer programs that can teach themselves to grow and change when exposed to new data. There are three types of machine learning: supervised learning, unsupervised learning, and reinforcement learning. Each type of machine learning has its own set of algorithms that can be used to make predictions based on data. Machine learning algorithms can be broadly classified into three categories: supervised learning algorithms, unsupervised learning algorithms, and reinforcement learning algorithms.</p>
+        <p>Machine learning powers various applications, from recommendation systems to self-driving cars. Understanding the different types of learning models and algorithms is crucial in leveraging ML effectively.</p>
+    </div>
 
+    <div class="container">
         <h2>References</h2>
         <ol>
             <li><a href="https://www.geeksforgeeks.org/machine-learning-basics/" class="button">Machine Learning Basics</a></li>
             <li><a href="https://en.wikipedia.org/wiki/Machine_learning" class="button">Machine Learning Wikipedia</a></li>
         </ol>
     </div>
+
 </body>
 </html>
