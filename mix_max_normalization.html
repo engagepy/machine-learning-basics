@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min-Max Normalization - Machine Learning Basics</title>
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #121212;
+            color: #e0e0e0;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
+        }
+        h1, h2, h3 {
+            color: #03DAC6;
+        }
+        h1 {
+            border-bottom: 2px solid #03DAC6;
+            padding-bottom: 10px;
+        }
+        code {
+            background-color: #333;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #252525;
+            color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .highlight {
+            background-color: #6200ea;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .formula {
+            background-color: #252525;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Min-Max Normalization in Machine Learning</h1>
+        
+        <h2>Introduction</h2>
+        <p>Min-Max Normalization is a simple yet powerful technique used in data preprocessing for machine learning. It's a method to scale numerical data to a fixed range, typically between 0 and 1. This lesson will explain the concept, its importance, and how to implement it using Python.</p>
+
+        <h2>Why Normalize Data?</h2>
+        <p>Normalization is crucial in machine learning for several reasons:</p>
+        <ul>
+            <li>It brings all features to the same scale, preventing some features from dominating others due to their larger range.</li>
+            <li>It helps in faster convergence during the training of machine learning models.</li>
+            <li>It makes it easier to compare and interpret data from different sources or scales.</li>
+        </ul>
+
+        <h2>The Min-Max Normalization Formula</h2>
+        <p>The formula for Min-Max Normalization is:</p>
+        <div class="formula">
+            X_normalized = (X - X_min) / (X_max - X_min)
+        </div>
+        <p>Where:</p>
+        <ul>
+            <li>X is the original value</li>
+            <li>X_min is the minimum value in the feature</li>
+            <li>X_max is the maximum value in the feature</li>
+        </ul>
+
+        <h2>Implementing Min-Max Normalization in Python</h2>
+        <p>Let's break down the code and implement Min-Max Normalization step by step:</p>
+
+        <h3>Step 1: Import Required Libraries</h3>
+        <pre><code>import pandas as pd
+import numpy as np</code></pre>
+        <p>We import pandas for data manipulation and numpy for numerical operations.</p>
+
+        <h3>Step 2: Load the Data</h3>
+        <pre><code>coffee = pd.read_csv('test.csv')
+spent = coffee['spent']
+print(spent)
+print("___")</code></pre>
+        <p>We load a CSV file containing coffee purchase data and extract the 'spent' column.</p>
+
+        <h3>Step 3: Find the Maximum and Minimum Values</h3>
+        <pre><code>max_spent = np.max(spent)
+print(f'Max spend : {max_spent}')
+min_spent = np.min(spent)
+print(f'Min spend : {min_spent}')
+print("____")</code></pre>
+        <p>We calculate the maximum and minimum values in the 'spent' column using numpy functions.</p>
+
+        <h3>Step 4: Calculate the Range</h3>
+        <pre><code>spent_range = max_spent - min_spent</code></pre>
+        <p>We calculate the range of values, which is the difference between the maximum and minimum values.</p>
+
+        <h3>Step 5: Apply Min-Max Normalization</h3>
+        <pre><code>spent_normalized = (spent - min_spent)/(max_spent - min_spent)
+print(spent_normalized)</code></pre>
+        <p>This is where we apply the Min-Max Normalization formula. Each value in 'spent' is normalized using the formula.</p>
+
+        <h2>Understanding the Results</h2>
+        <p>After normalization:</p>
+        <ul>
+            <li>The minimum value in the dataset will be mapped to 0</li>
+            <li>The maximum value in the dataset will be mapped to 1</li>
+            <li>All other values will be scaled proportionally between 0 and 1</li>
+        </ul>
+
+        <h2>Practical Considerations</h2>
+        <ul>
+            <li>Min-Max Normalization is sensitive to outliers. If your dataset has extreme values, consider using other normalization techniques or handling outliers first.</li>
+            <li>When applying this normalization to new data, always use the min and max values from the training set to ensure consistency.</li>
+            <li>Some machine learning algorithms require normalized data to perform well, while others are less sensitive to the scale of features.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>Min-Max Normalization is a fundamental preprocessing technique in machine learning. It helps in scaling data to a standard range, which can significantly improve the performance and interpretability of many machine learning models. By understanding and applying this technique, you're taking an important step in preparing your data for effective machine learning applications.</p>
+    </div>
+</body>
+</html>

@@ -101,12 +101,49 @@
                 padding: 20px;
             }
         }
+
+        /* Navigation */
+        nav {
+            background-color: #252525;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li a {
+            color: #03DAC6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Key Concept */
+        .key-concept {
+            background-color: #252525;
+            border-left: 4px solid #03DAC6;
+            padding: 10px;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#types">Types of ML</a></li>
+            <li><a href="#algorithms">ML Algorithms</a></li>
+            <li><a href="#lessons">Lessons</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
-        <h1>Machine Learning Basics by Zorawar Purohit - W.I.P</h1>
+        <h1>Machine Learning Basics For All - W.I.P</h1>
 
         <h2>Using This Repository</h2>
         <p>Clone and run the repository with:</p>
@@ -117,23 +154,31 @@ pip install -r requirements.txt
 python3 &lt;filename&gt;.py</code></pre>
     </div>
 
-    <div class="container">
-        <h2>File Structure</h2>
+    <div class="container" id="lessons">
+        <h2>Lessons</h2>
         <p>Each file is a lesson covering a specific ML topic:</p>
         <ul>
-
-            <li><code>mix_max_normalization.py</code> - Min-Max Normalization Foundation Math</li>
-            <li><code>min_max_scaler.py</code> - Min-Max Scaler via Scikit-Learn</li>
-            <li><code>binning.py</code> - Binning in Machine Learning via Scikit-Learn</li>
+            <li><a href="min_max_normalization.html">min_max_normalization.py</a> - Min-Max Normalization Foundation Math</li>
+            <div class="key-concept">
+                🔑 <code>spent_normalized = (spent - min_spent)/(max_spent - min_spent)</code>
+            </div>
+            <li><a href="min_max_scaler.html">min_max_scaler.py</a> - Min-Max Scaler via Scikit-Learn</li>
+            <div class="key-concept">
+                🔑 <code>from sklearn.preprocessing import MinMaxScaler</code>
+            </div>
+            <li><a href="binning.html">binning.py</a> - Binning in Machine Learning via Scikit-Learn</li>
+            <div class="key-concept">
+                🔑 <code>pd.cut(ages, age_bins, right=False)</code>
+            </div>
         </ul>
     </div>
 
-    <div class="container">
+    <div class="container" id="introduction">
         <h2>Introduction To Machine Learning Basics</h2>
-        <p>Machine Learning (ML) is a subset of artificial intelligence focused on developing systems that learn and improve from experience without being explicitly programmed.</p>
+        <p>Machine Learning (ML) is a subset of artificial intelligence focused on developing systems that learn and improve from experience without being explicitly programmed. It's similar to data mining in that both search for patterns in data, but ML uses that data to adjust program actions automatically.</p>
     </div>
 
-    <div class="container">
+    <div class="container" id="types">
         <h2>Types of Machine Learning</h2>
         <ol>
             <li><span class="highlight">Supervised Learning</span></li>
@@ -151,14 +196,16 @@ python3 &lt;filename&gt;.py</code></pre>
         <p>Agents learn by interacting with their environment and receiving rewards for positive outcomes.</p>
     </div>
 
-    <div class="container">
+    <div class="container" id="algorithms">
         <h2>Machine Learning Algorithms</h2>
         
         <h3>Supervised Learning Algorithms</h3>
         <ul>
             <li>Linear Regression</li>
+            <li>Logistic Regression</li>
             <li>Decision Trees</li>
             <li>Random Forest</li>
+            <li>Gradient Boosting</li>
             <li>Support Vector Machines</li>
             <li>Neural Networks</li>
         </ul>
@@ -168,28 +215,33 @@ python3 &lt;filename&gt;.py</code></pre>
             <li>K-Means Clustering</li>
             <li>Hierarchical Clustering</li>
             <li>Principal Component Analysis (PCA)</li>
+            <li>Independent Component Analysis</li>
+            <li>Singular Value Decomposition</li>
+            <li>Apriori Algorithm</li>
         </ul>
 
         <h3>Reinforcement Learning Algorithms</h3>
         <ul>
             <li>Q-Learning</li>
-            <li>Deep Q Networks (DQN)</li>
-            <li>Policy Gradient Methods</li>
+            <li>SARSA</li>
+            <li>Deep Adversarial Networks</li>
+            <li>Deep Deterministic Policy Gradient</li>
+            <li>Asynchronous Advantage Actor-Critic</li>
         </ul>
     </div>
 
     <div class="container">
         <h2>Conclusion</h2>
-        <p>Machine learning powers various applications, from recommendation systems to self-driving cars. Understanding the different types of learning models and algorithms is crucial in leveraging ML effectively.</p>
+        <p>Machine learning powers various applications, from recommendation systems to self-driving cars. Understanding the different types of learning models and algorithms is crucial in leveraging ML effectively. This repository aims to provide a comprehensive introduction to machine learning basics for beginners.</p>
     </div>
 
     <div class="container">
         <h2>References</h2>
         <ol>
+            <li><a href="https://codecademy.com" class="button">Fundamentals of Machine Learning</a></li>
             <li><a href="https://www.geeksforgeeks.org/machine-learning-basics/" class="button">Machine Learning Basics</a></li>
             <li><a href="https://en.wikipedia.org/wiki/Machine_learning" class="button">Machine Learning Wikipedia</a></li>
         </ol>
     </div>
-
 </body>
 </html>

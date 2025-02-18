@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min-Max Scaler in Machine Learning - Scikit-learn</title>
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #121212;
+            color: #e0e0e0;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
+        }
+        h1, h2, h3 {
+            color: #03DAC6;
+        }
+        h1 {
+            border-bottom: 2px solid #03DAC6;
+            padding-bottom: 10px;
+        }
+        code {
+            background-color: #333;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #252525;
+            color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .highlight {
+            background-color: #6200ea;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .note {
+            background-color: #252525;
+            border-left: 4px solid #03DAC6;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Min-Max Scaler in Machine Learning using Scikit-learn</h1>
+        
+        <h2>Introduction</h2>
+        <p>In this lesson, we'll explore the MinMaxScaler from scikit-learn, a powerful tool for normalizing numerical data. We'll use a real-world example with coffee purchase data to demonstrate its application and visualization.</p>
+
+        <h2>What is MinMaxScaler?</h2>
+        <p>MinMaxScaler is a preprocessing technique that scales and transforms each feature individually such that it is in the given range on the training set, usually between zero and one. It's particularly useful when you need your features on a fixed scale and when your data has varying scales.</p>
+
+        <h2>Implementing MinMaxScaler in Python</h2>
+        <p>Let's break down the code and implement MinMaxScaler step by step:</p>
+
+        <h3>Step 1: Import Required Libraries</h3>
+        <pre><code>import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler</code></pre>
+        <p>We import pandas for data manipulation, numpy for numerical operations, matplotlib for visualization, and MinMaxScaler from scikit-learn.</p>
+
+        <h3>Step 2: Load and Prepare the Data</h3>
+        <pre><code>coffee = pd.read_csv('test.csv')
+spent = coffee['spent']
+print(spent.head(10))</code></pre>
+        <p>We load a CSV file containing coffee purchase data and extract the 'spent' column. We print the first 10 entries to get a glimpse of our data.</p>
+
+        <h3>Step 3: Reshape the Data</h3>
+        <pre><code>spent_reshaped = np.array(spent).reshape(-1,1)</code></pre>
+        <p>MinMaxScaler expects 2D array input, so we reshape our 1D array to a 2D array with one column.</p>
+
+        <div class="note">
+            <p><strong>Note:</strong> The <code>reshape(-1,1)</code> function creates a 2D array with one column and as many rows as needed to fit all the data.</p>
+        </div>
+
+        <h3>Step 4: Initialize and Apply MinMaxScaler</h3>
+        <pre><code>mmscaler = MinMaxScaler()
+reshaped_scaled = mmscaler.fit_transform(spent_reshaped)</code></pre>
+        <p>We create an instance of MinMaxScaler and apply it to our reshaped data. The <code>fit_transform</code> method both fits the scaler to the data and transforms it in one step.</p>
+
+        <h3>Step 5: Verify the Scaling</h3>
+        <pre><code>print(np.min(reshaped_scaled))
+print(np.max(reshaped_scaled))</code></pre>
+        <p>We print the minimum and maximum values of our scaled data to confirm that it's been scaled to the range [0, 1].</p>
+
+        <h3>Step 6: Prepare Data for Visualization</h3>
+        <pre><code>val = set(np.unique(reshaped_scaled))
+val_counts = pd.Series(list(val)).value_counts()</code></pre>
+        <p>We create a set of unique values in our scaled data and count their occurrences.</p>
+
+        <h3>Step 7: Visualize the Data</h3>
+        <pre><code>val_counts.plot(kind='pie')
+plt.show()</code></pre>
+        <p>We create a pie chart to visualize the distribution of scaled values.</p>
+
+        <h2>Understanding the Results</h2>
+        <ul>
+            <li>The minimum value in the scaled dataset should be 0 or very close to 0.</li>
+            <li>The maximum value in the scaled dataset should be 1 or very close to 1.</li>
+            <li>The pie chart shows the distribution of unique values in the scaled dataset. This can help identify if certain ranges are more common than others.</li>
+        </ul>
+
+        <h2>Advantages of MinMaxScaler</h2>
+        <ul>
+            <li>Preserves zero entries in sparse data.</li>
+            <li>Doesn't center the data, which may be preferable in some cases.</li>
+            <li>Works well when you know the approximate min and max of your feature and want to scale it to a specific range.</li>
+        </ul>
+
+        <h2>Considerations</h2>
+        <ul>
+            <li>MinMaxScaler is sensitive to outliers. If your dataset has extreme values, they can compress the majority of the data into a small range.</li>
+            <li>When applying this scaler to new data, always use the scaler fitted on the training data to ensure consistency.</li>
+            <li>Some machine learning algorithms perform better with scaled features, while others are less sensitive to feature scaling.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>MinMaxScaler is a powerful tool for normalizing data in machine learning pipelines. It's particularly useful when you need your features on a fixed scale and when you're working with algorithms that assume all features are on the same scale. By understanding and applying this technique, you're enhancing your ability to preprocess data effectively for machine learning applications.</p>
+    </div>
+</body>
+</html>
