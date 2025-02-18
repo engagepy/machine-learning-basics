@@ -1,62 +1,10 @@
 # Machine Learning Basics For All - W.I.P
 
-## Using This Repository
+> Instruction on Using This Repository Are At The Bottom
 
-To use this repository, you can clone and run it using the following commands:
+> Github Page Site: [Machine Learning Basics](https://engagepy.github.io/machine-learning-basics/)
 
-```bash\n
-git clone https://github.com/engagepy/machine-learning-basics.git
-```
-```bash\n
-python3 -m venv env
-```
-```bash\n
-source env/bin/activate
-```
-```bash\n
-pip install -r requirements.txt
-```
-```bash\n
-python3 <filename>.py
-```
-
-## File Structure
-
-> Each file is a lesson covering a specific topic in machine learning.
-
-- mix_max_normalization.py - Min-Max Normalization 
-
-> 🔑`spent_normalized = (spent - min_spent)/(max_spent - min_spent)`
-
-- min_max_scaler.py - MinMaxScaler in Machine Learning 
-
-> 🔑`sklearn.preprocessing import MinMaxScaler`
-
-- binning.py - Binning Data in Machine Learning 
-
-> 🔑`pd.cut(ages,age_bins, right=False)`
-
-
-
-## Index :
-
-### Introduction to Machine Learning
-
-### Types of Machine Learning
-
-### Machine Learning Algorithms
-
-### Supervised Learning
-
-### Unsupervised Learning
-
-### Reinforcement Learning
-
-### Machine Learning Models
-
-### Data Preprocessing
-
-...
+## Table of Contents
 
 ## Introduction To Machine Learning Basics
 
@@ -164,3 +112,78 @@ Machine learning is a powerful tool that can be used to make predictions based o
 3. [Machine Learning](https://en.wikipedia.org/wiki/Machine_learning) 
 
 
+# To use this repository, you can clone and run it using the following commands:
+
+```bash\n
+git clone https://github.com/engagepy/machine-learning-basics.git
+```
+```bash\n
+python3 -m venv env
+```
+```bash\n
+source env/bin/activate
+```
+```bash\n
+pip install -r requirements.txt
+```
+```bash\n
+python3 <filename>.py
+```
+
+## Project File Structure
+
+> Each `folder` is a Topic, each `file.py` therein a lesson covering a specific subject pertinent to machine learning.
+
+### data-pre-process
+
+- mix_max_normalization.py - Min-Max Normalization 
+
+> 🔑`spent_normalized = (spent - min_spent)/(max_spent - min_spent)`
+
+- min_max_scaler.py - MinMaxScaler in Machine Learning 
+
+> 🔑`sklearn.preprocessing import MinMaxScaler`
+
+- binning.py - Binning Data in Machine Learning 
+
+> 🔑`pd.cut(ages,age_bins, right=False)`
+
+### pre-training
+
+> W.I.P
+
+### model-training
+
+> W.I.P
+
+### post-training
+
+> W.I.P
+
+### model-evaluation
+
+> W.I.P
+
+### model-deployment
+
+> W.I.P
+
+### model-monitoring
+
+> W.I.P
+
+### model-optimization
+
+> W.I.P
+
+### model-interpretation
+
+> W.I.P
+
+### model-visualization
+
+> W.I.P
+
+### model-automation
+
+> W.I.P
