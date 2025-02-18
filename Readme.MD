@@ -8,7 +8,7 @@
 
 ## Introduction To Machine Learning Basics
 
-Machine learning is a subset of artificial intelligence that focuses on the development of computer programs that can teach themselves to grow and change when exposed to new data. The process of machine learning is similar to that of data mining. Both systems search through data to look for patterns. However, instead of extracting data for human comprehension -- as is the case in data mining applications -- machine learning uses that data to detect patterns in data and adjust program actions accordingly.
+Machine learning is a subset of artificial intelligence that focuses on the development of computer programs that can teach themselves to grow and change when exposed to new data. The process of machine learning is similar to that of data mining. Both systems search through data to look for patterns. However, instead of extracting data for human comprehension - as is the case in data mining applications machine learning uses that data to detect patterns in data and adjust program actions accordingly.
 
 ## Types of Machine Learning
 
