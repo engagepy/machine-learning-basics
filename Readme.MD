@@ -24,10 +24,39 @@ python3 <filename>.py
 
 > Each file is a lesson covering a specific topic in machine learning.
 
-### Index :
+- mix_max_normalization.py - Min-Max Normalization 
 
-- binning.py - Binning in Machine Learning
-- min_max.py - Min-Max Normalization in Machine Learning
+> 🔑`spent_normalized = (spent - min_spent)/(max_spent - min_spent)`
+
+- min_max_scaler.py - MinMaxScaler in Machine Learning 
+
+> 🔑`sklearn.preprocessing import MinMaxScaler`
+
+- binning.py - Binning Data in Machine Learning 
+
+> 🔑`pd.cut(ages,age_bins, right=False)`
+
+
+
+## Index :
+
+### Introduction to Machine Learning
+
+### Types of Machine Learning
+
+### Machine Learning Algorithms
+
+### Supervised Learning
+
+### Unsupervised Learning
+
+### Reinforcement Learning
+
+### Machine Learning Models
+
+### Data Preprocessing
+
+...
 
 ## Introduction To Machine Learning Basics
 
@@ -86,13 +115,52 @@ There are several machine learning algorithms, and they can be broadly classifie
 - Deep Deterministic Policy Gradient
 - Asynchronous Advantage Actor-Critic
 
+## Machine Learning Models
+
+Machine learning models are used to make predictions based on data. There are several types of machine learning models, including:
+
+1. Linear Regression
+2. Logistic Regression
+3. Decision Trees
+4. Random Forest
+5. Gradient Boosting
+6. Support Vector Machines
+7. Neural Networks
+8. K-Means Clustering
+9. Hierarchical Clustering
+10. Principal Component Analysis
+11. Independent Component Analysis
+12. Singular Value Decomposition
+13. Apriori Algorithm
+14. Expectation-Maximization Algorithm
+15. Q-Learning
+16. SARSA
+17. Deep Adversarial Networks
+18. Deep Deterministic Policy Gradient
+19. Asynchronous Advantage Actor-Critic
+
+## Data Preprocessing
+
+Data preprocessing is an important step in machine learning. It involves transforming raw data into a format that is suitable for analysis. Data preprocessing can include several steps, such as:
+
+1. Data Cleaning
+2. Data Transformation
+3. Data Reduction
+4. Data Discretization
+5. Data Normalization
+6. Data Binning
+
+Data preprocessing is essential because it helps to improve the quality of the data and make it easier to analyze. It also helps to reduce the time and effort required to train machine learning models.
+
+
 ## Conclusion
 
 Machine learning is a powerful tool that can be used to make predictions based on data. It is a subset of artificial intelligence that focuses on the development of computer programs that can teach themselves to grow and change when exposed to new data. There are three types of machine learning: supervised learning, unsupervised learning, and reinforcement learning. Each type of machine learning has its own set of algorithms that can be used to make predictions based on data. Machine learning algorithms can be broadly classified into three categories: supervised learning algorithms, unsupervised learning algorithms, and reinforcement learning algorithms.
 
 ## References
 
-1. [Machine Learning Basics](https://www.geeksforgeeks.org/machine-learning-basics/)
-2. [Machine Learning](https://en.wikipedia.org/wiki/Machine_learning)
+1. [Fundamentals of Machine Learning](https://codecademy.com) 
+2. [Machine Learning Basics](https://www.geeksforgeeks.org/machine-learning-basics/)
+3. [Machine Learning](https://en.wikipedia.org/wiki/Machine_learning) 
 
 
