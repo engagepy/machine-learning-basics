@@ -136,6 +136,18 @@ python3 <filename>.py
 
 ### data-pre-process
 
+- data_centereing.py - Data Centering in Machine Learning
+
+> 🔑`centered_data = data - mean`
+
+- data_standardization.py - Data Standardization in Machine Learning
+
+> 🔑`standardized_data = (data - mean)/std_dev`
+
+- standard_scaler.py - Standardization in Machine Learning
+
+> 🔑`sklearn.preprocessing import StandardScaler`
+
 - mix_max_normalization.py - Min-Max Normalization 
 
 > 🔑`spent_normalized = (spent - min_spent)/(max_spent - min_spent)`
@@ -147,6 +159,9 @@ python3 <filename>.py
 - binning.py - Binning Data in Machine Learning 
 
 > 🔑`pd.cut(ages,age_bins, right=False)`
+
+
+
 
 ### pre-training
 
